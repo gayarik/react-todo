@@ -1,5 +1,7 @@
 # React ToDo List
 
+*This project used this technology's: React + Tailwind*
+
 ## Available Scripts
 
 In the project directory, you can run:
