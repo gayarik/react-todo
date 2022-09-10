@@ -1,13 +1,15 @@
+import { BiTrashAlt } from 'react-icons/bi'
+
 const ToDoList = ({ todo, toggleTask, removeTask }) => {
    return (
-      <div key={todo.id} className="flex justify-center items-center">
-         <div className={todo.complete ? "item-text strike" : "item-text"}
+      <div key={todo.id} className="cursor-pointer max-w-sm flex justify-between items-center m-auto border rounded-md p-3 px-4 mt-4">
+         <div className={todo.complete ? "line-through" : ""}
             onClick={() => toggleTask(todo.id)}
          >
             {todo.task}
          </div>
-         <div className="item-delete pl-96" onClick={() => removeTask(todo.id)}>
-            X
+         <div onClick={() => removeTask(todo.id)}>
+            <BiTrashAlt className='hover:text-red-600' />
          </div>
       </div>
    )

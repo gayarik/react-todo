@@ -16,12 +16,16 @@ function App() {
       }
    }
 
-   const removeTask = () => {
-
+   const removeTask = (id) => {
+      setTodos([...todos.filter((todo) => todo.id !== id)])
    }
 
-   const handleToggle = () => {
-
+   const handleToggle = (id) => {
+      setTodos([
+         ...todos.map((todo) =>
+            todo.id === id ? { ...todo, complete: !todo.complete } : { ...todo }
+         )
+      ])
    }
 
    return (
@@ -37,7 +41,7 @@ function App() {
                />
             )
          })}
-         <h1 className="text-xl text-center">Список завдань: {todos.length}</h1>
+         <h1 className="max-w-sm text-xl text-left mt-7 m-auto">Total: {todos.length}</h1>
       </div>
    );
 }

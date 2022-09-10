@@ -22,7 +22,7 @@ const ToDoForm = ({ addTask }) => {
    return (
       <form
          onSubmit={handleSubmit}
-         className="flex justify-center mt-32 mb-10 items-center">
+         className="flex justify-center mt-32 mb-14 items-center">
          <input
             type="text"
             placeholder="Enter the task..."
@@ -31,7 +31,7 @@ const ToDoForm = ({ addTask }) => {
             onChange={handleChange}
             onKeyDown={handleKeyPress}
          />
-         <button className="rounded-full p-3 px-4 ml-3 bg-indigo-700 text-white">Зберегти</button>
+         <button className="rounded-xl hover:rounded-3xl ease-in-out duration-300 p-3 px-5 ml-4 bg-indigo-700 text-white">Add</button>
       </form>
    )
 }
